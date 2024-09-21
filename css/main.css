@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shop .shop-food, .stay .stay-photos, .stay, .farm .farm-photos, .farm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shop .shop-food .fruits .fruits-description p, .shop .shop-food .bread .bread-description p, .shop .shop-food .coffee .coffee-description p, .stay .stay-photos .cabine .cabine-description p, .stay .stay-photos .relax .relax-description p, .stay .stay-photos .enjoy-the-nature .enjoy-the-nature-description p, .farm .rooster .rooster-description p, .farm .cow .cow-description p, .farm .farm-photos .mule .mule-description p, .farm .farm-photos .barn .barn-description p {
+  font-size: 2vw;
+  background-color: rgba(253, 249, 246, 0.8);
+  padding: 10px;
+}
+
+body {
+  background-color: #fdf9f6;
+  font-family: "Inter", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-image: url(../images/myImg/322932448_603553828241847_6233234788884693655_n.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header nav {
+  background-color: rgba(7, 7, 7, 0.6);
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header nav .left-nav a span {
+  display: block;
+}
+header nav .right-nav-logo img {
+  height: 25px;
+}
+header nav .right-nav {
+  display: none;
+}
+header nav a {
+  color: #fdf9f6;
+  text-decoration: none;
+}
+header .about {
+  background-color: rgba(253, 249, 246, 0.6);
+  padding: 10px;
+}
+header .about h3 {
+  font-size: 2vw;
+}
+header .about p {
+  font-size: 2vw;
+}
+
+.farm .farm-photos .barn {
+  background-image: url(../images/farm/StockSnap_49FA273DDD.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.farm .farm-photos .mule {
+  background-image: url(../images/farm/StockSnap_BWRCGCOECB.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.farm .cow {
+  background-image: url(../images/farm/StockSnap_QZZC02VYSS.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.farm .rooster {
+  background-image: url(../images/farm/StockSnap_V9YD0J883E.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.alpacas {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.alpacas .alpaca-photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+.alpacas .alpaca-photos img {
+  width: calc(33.3333333333% - 6.6666666667px);
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.tours {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tours div {
+  border: 0.5px solid black;
+  padding: 10px;
+}
+.tours div ul li {
+  list-style-type: none;
+  margin: 10px 0px;
+  font-style: italic;
+}
+
+.stay .book-now-button {
+  width: 50%;
+}
+.stay .stay-photos .enjoy-the-nature {
+  background-image: url(../images/accommodation/StockSnap_XTRAJDQIPV.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.stay .stay-photos .relax {
+  background-image: url(../images/accommodation/StockSnap_BD0AC07780.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.stay .stay-photos .cabine {
+  background-image: url(../images/accommodation/StockSnap_T0BHAFEFFR.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.book-now #book-now-description {
+  font-style: italic;
+  font-size: 4vw;
+  margin: 10px;
+  text-align: center;
+}
+
+.shop .shop-food .coffee {
+  background-image: url(../images/farm-shop/StockSnap_THXU08ODDE.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.shop .shop-food .bread {
+  background-image: url(../images/farm-shop/StockSnap_NKU48AAAWF.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.shop .shop-food .fruits {
+  background-image: url(../images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+.contact {
+  border: 0.5px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.contact form div label {
+  display: block;
+}
+.contact form div input,
+.contact form div textarea {
+  width: 100%;
+}
+
+button {
+  display: block;
+  padding: 10px 30px;
+  margin: 0 auto;
+}
+
+footer {
+  height: 5vh;
+  background-color: red;
+  color: #fdf9f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

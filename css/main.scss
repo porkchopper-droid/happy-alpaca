@@ -1,0 +1,302 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+%mobile-photos-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gapMobile;
+}
+
+@mixin mobile-photos-unit-display($url) {
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+%mobile-photos-unit-description {
+  font-size: 2vw;
+  background-color: rgba($color: $primaryColor1, $alpha: 0.8);
+  padding: $paddingMobile;
+}
+body {
+  background-color: $primaryColor1;
+  font-family: "Inter", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-image: url(../images/myImg/322932448_603553828241847_6233234788884693655_n.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  nav {
+    background-color: rgba($color: $blackColor, $alpha: 0.6);
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $paddingMobile;
+    .left-nav {
+      a {
+        span {
+          display: block;
+        }
+      }
+    }
+    .right-nav-logo {
+      img {
+        height: 25px;
+      }
+    }
+    .right-nav {
+      display: none;
+    }
+    a {
+      color: $primaryColor1;
+      text-decoration: none;
+    }
+  }
+  .about {
+    background-color: rgba($color: $primaryColor1, $alpha: 0.6);
+    padding: $paddingMobile;
+    h3 {
+      font-size: 2vw;
+    }
+    p {
+      font-size: 2vw;
+    }
+  }
+}
+
+.farm {
+  @extend %mobile-photos-display;
+  .farm-photos {
+    @extend %mobile-photos-display;
+    .barn {
+      @include mobile-photos-unit-display(
+        url(../images/farm/StockSnap_49FA273DDD.jpg)
+      );
+      .barn-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+    .mule {
+      @include mobile-photos-unit-display(
+        url(../images/farm/StockSnap_BWRCGCOECB.jpg)
+      );
+      .mule-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+  }
+  .cow {
+    @include mobile-photos-unit-display(
+      url(../images/farm/StockSnap_QZZC02VYSS.jpg)
+    );
+    .cow-description {
+      p {
+        @extend %mobile-photos-unit-description;
+      }
+    }
+  }
+  .rooster {
+    @include mobile-photos-unit-display(
+      url(../images/farm/StockSnap_V9YD0J883E.jpg)
+    );
+    .rooster-description {
+      p {
+        @extend %mobile-photos-unit-description;
+      }
+    }
+  }
+}
+
+.alpacas {
+  margin: $marginMobile;
+  display: flex;
+  flex-direction: column;
+  gap: $gapMobile;
+  .alpaca-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gapMobile;
+    width: 100%;
+    img {
+      width: calc((100% / 3) - ((2 * $gapMobile) / 3));
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+.tours {
+  margin: $marginMobile;
+  display: flex;
+  flex-direction: column;
+  gap: $gapMobile;
+  div {
+    border: 0.5px solid black;
+    padding: $paddingMobile;
+    ul {
+      li {
+        list-style-type: none;
+        margin: $paddingMobile 0px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.stay {
+  @extend %mobile-photos-display;
+  .book-now-button {
+    width: 50%;
+  }
+  .stay-photos {
+    @extend %mobile-photos-display;
+    .enjoy-the-nature {
+      @include mobile-photos-unit-display(
+        url(../images/accommodation/StockSnap_XTRAJDQIPV.jpg)
+      );
+      .enjoy-the-nature-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+    .relax {
+      @include mobile-photos-unit-display(
+        url(../images/accommodation/StockSnap_BD0AC07780.jpg)
+      );
+      .relax-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+    .cabine {
+      @include mobile-photos-unit-display(
+        url(../images/accommodation/StockSnap_T0BHAFEFFR.jpg)
+      );
+      .cabine-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+  }
+}
+
+.book-now {
+  #book-now-description {
+    font-style: italic;
+    font-size: 4vw;
+    margin: $marginMobile;
+    text-align: center;
+  }
+}
+
+.shop {
+  .shop-food {
+    @extend %mobile-photos-display;
+    .coffee {
+      @include mobile-photos-unit-display(
+        url(../images/farm-shop/StockSnap_THXU08ODDE.jpg)
+      );
+      .coffee-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+    .bread {
+      @include mobile-photos-unit-display(
+        url(../images/farm-shop/StockSnap_NKU48AAAWF.jpg)
+      );
+      .bread-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+    .fruits {
+      @include mobile-photos-unit-display(
+        url(../images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg)
+      );
+      .fruits-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
+      }
+    }
+  }
+}
+.contact {
+  border: 0.5px solid black;
+  margin: $marginMobile;
+  padding: $paddingMobile;
+  form {
+    div {
+      label {
+        display: block;
+      }
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}
+
+button {
+  display: block;
+  padding: 10px 30px;
+  margin: 0 auto;
+}
+
+footer {
+  height: 5vh;
+  background-color: red;
+  color: $primaryColor1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// @media (min-width: 768px) {
+//   header {
+//     background-image: url(../images/myImg/alpaca-7169203_1920.jpg);
+//     nav {
+//       .right-nav-logo {
+//         display: none;
+//       }
+//       .right-nav {
+//         display: inline-block;
+//       }
+//     }
+//   }
+// }
