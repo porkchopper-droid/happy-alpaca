@@ -22,10 +22,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  overflow: hidden;
 }
 
 header {
+  overflow: hidden;
   background-image: url(../images/myImg/322932448_603553828241847_6233234788884693655_n.jpg);
   background-size: cover;
   background-position: center;
