@@ -38,18 +38,20 @@
           <a href="#"><span>The</span><span>Happy</span><span>Alpaca</span></a>
         </div>
 
-        <div class="right-nav-logo"><img src="./images/logo/alpaca.svg" /></div>
+        <div class="right-nav-logo">
+          <img src="./images/logo/alpaca.svg" />
+        </div>
         <div class="right-nav">
-          <a href=".about">ABOUT</a>
-          <a href=".farm">FARM</a>
-          <a href=".alpacas">ALPACAS</a>
-          <a href=".tours">TOURS</a>
-          <a href=".stay">STAY</a>
-          <a href=".shop">SHOP</a>
-          <a href=".contact">CONTACT</a>
+          <a href="#about">ABOUT</a>
+          <a href="#farm">FARM</a>
+          <a href="#alpacas">ALPACAS</a>
+          <a href="#tours">TOURS</a>
+          <a href="#stay">STAY</a>
+          <a href="#shop">SHOP</a>
+          <a href="#contact">CONTACT</a>
         </div>
       </nav>
-      <section class="about">
+      <section id="about">
         <h3>ABOUT</h3>
         <p>
           The Happy Alpaca Farm is a fictive farm everyone can enjoy. Book a
@@ -60,7 +62,7 @@
     </header>
 
     <main>
-      <section class="farm">
+      <section id="farm">
         <h3>FARM</h3>
         <div class="farm-photos">
           <div class="barn">
@@ -106,7 +108,7 @@
           <!-- <img src="./images/farm/StockSnap_V9YD0J883E.jpg" alt="" /> -->
         </div>
       </section>
-      <section class="alpacas">
+      <section id="alpacas">
         <h3>OUR ALPACAS</h3>
         <div class="alpaca-photos">
           <img src="./images/alpacas/balou.jpg" alt="balou" />
@@ -118,64 +120,71 @@
         </div>
       </section>
 
-      <section class="tours">
+      <section id="tours">
         <h3>TOURS</h3>
-        <div class="one-day-tour">
-          <h4>1-day tour</h4>
-          <p>
-            Book a tour with our friendly alpacas and explore the meadows and
-            woods around the farm.
-          </p>
-          <ul>
-            <li>Guided tour for two adults</li>
-            <li>Breakfast and lunch included</li>
-            <li>One picture with your favorite alpaca</li>
-          </ul>
-          <h5>Prices starting from 50 EUR</h5>
-        </div>
-        <div class="two-day-tour">
-          <h4>2-day tour</h4>
-          <p>
-            Book a tour with our friendly alpacas and explore the meadows and
-            woods around the farm.
-          </p>
-          <ul>
-            <li>Guided tour for two adults</li>
-            <li>One night in our beautiful hotel</li>
-            <li>Breakfast and lunch included</li>
-            <li>One picture with your favorite alpaca</li>
-            <li>
-              After the tour, enjoy the rest of your stay in our cosy
-              accomodation with a fireplace and a perfect view from the windows.
-            </li>
-          </ul>
-          <h5>Prices starting from 100 EUR</h5>
-        </div>
-        <div class="three-day-tour">
-          <h4>3-day tour</h4>
-          <p>
-            Book a tour with our friendly alpacas and explore the meadows and
-            woods around the farm.
-          </p>
-          <ul>
-            <li>Guided tour for two adults</li>
-            <li>One night in our beautiful hotel</li>
-            <li>Breakfast and lunch included</li>
-            <li>One picture with your favorite alpaca</li>
-            <li>
-              After the tour, enjoy the rest of your stay in our cosy
-              accomodation with a fireplace and a perfect view from the windows.
-            </li>
-          </ul>
-          <h5>Prices starting from 150 EUR</h5>
+        <div class="tours-descriptions">
+          <div class="one-day-tour">
+            <h4>1-day tour</h4>
+            <p>
+              Book a tour with our friendly alpacas and explore the meadows and
+              woods around the farm.
+            </p>
+            <ul>
+              <li>Guided tour for two adults</li>
+              <li>Breakfast and lunch included</li>
+              <li>One picture with your favorite alpaca</li>
+            </ul>
+            <h5>Prices starting from 50 EUR</h5>
+            <button>BOOK NOW</button>
+          </div>
+          <div class="two-day-tour">
+            <h4>2-day tour</h4>
+            <p>
+              Book a tour with our friendly alpacas and explore the meadows and
+              woods around the farm.
+            </p>
+            <ul>
+              <li>Guided tour for two adults</li>
+              <li>One night in our beautiful hotel</li>
+              <li>Breakfast and lunch included</li>
+              <li>One picture with your favorite alpaca</li>
+              <li>
+                After the tour, enjoy the rest of your stay in our cosy
+                accomodation with a fireplace and a perfect view from the
+                windows.
+              </li>
+            </ul>
+            <h5>Prices starting from 100 EUR</h5>
+            <button>BOOK NOW</button>
+          </div>
+          <div class="three-day-tour">
+            <h4>3-day tour</h4>
+            <p>
+              Book a tour with our friendly alpacas and explore the meadows and
+              woods around the farm.
+            </p>
+            <ul>
+              <li>Guided tour for two adults</li>
+              <li>One night in our beautiful hotel</li>
+              <li>Breakfast and lunch included</li>
+              <li>One picture with your favorite alpaca</li>
+              <li>
+                After the tour, enjoy the rest of your stay in our cosy
+                accomodation with a fireplace and a perfect view from the
+                windows.
+              </li>
+            </ul>
+            <h5>Prices starting from 150 EUR</h5>
+            <button>BOOK NOW</button>
+          </div>
         </div>
       </section>
 
-      <section class="stay">
+      <section id="stay">
         <h3>STAY</h3>
         <div class="stay-photos">
-          <h4>Enjoy the nature</h4>
           <div class="enjoy-the-nature">
+            <h4 class="highlighted-text">Enjoy the nature</h4>
             <!-- <img
               src="./images/accommodation/StockSnap_XTRAJDQIPV.jpg"
               alt="nature"
@@ -187,8 +196,9 @@
               </p>
             </div>
           </div>
-          <h4>Relax</h4>
+
           <div class="relax">
+            <h4 class="highlighted-text">Relax</h4>
             <!-- <img
               src="./images/accommodation/StockSnap_BD0AC07780.jpg"
               alt="relaxing"
@@ -196,13 +206,14 @@
             <div class="relax-description">
               <p>
                 There is nothing more relaxing than exploring the surroundings
-                witht an alpaca. You will quickly get used to your new friend
+                with an alpaca. You will quickly get used to your new friend
                 and have unforgettable adventures.
               </p>
             </div>
           </div>
-          <h4>The cabine</h4>
+
           <div class="cabine">
+            <h4 class="highlighted-text">The cabine</h4>
             <div class="cabine-description">
               <!-- <img
               src="./images/accommodation/StockSnap_T0BHAFEFFR.jpg"
@@ -227,7 +238,7 @@
         <button>BOOK NOW</button>
       </section>
 
-      <section class="shop">
+      <section id="shop">
         <h3>SHOP</h3>
         <div class="shop-food">
           <div class="coffee">
@@ -272,11 +283,11 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact">
         <h3>CONTACT</h3>
         <form action="" method="POST">
           <div>
-            <label for="name">You name</label>
+            <label for="name">Your name:</label>
             <input
               type="text"
               name="name"
@@ -286,7 +297,7 @@
             />
           </div>
           <div>
-            <label for="email">Your email</label>
+            <label for="email">Your email:</label>
             <input
               type="email"
               name="email"
@@ -296,7 +307,7 @@
             />
           </div>
           <div>
-            <label for="message">Your message</label>
+            <label for="message">Your message:</label>
             <textarea name="comment" id="comment" value=""></textarea>
           </div>
           <button>SEND</button>

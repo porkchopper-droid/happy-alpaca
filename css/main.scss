@@ -15,12 +15,18 @@
   gap: $gapMobile;
 }
 
-@mixin mobile-photos-unit-display($url) {
+%desktop-photos-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gapDesktop;
+}
+
+@mixin mobile-photos-unit-display($url, $width, $height) {
   background-image: $url;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 50vh;
+  width: $width;
+  height: $height;
   display: flex;
   align-items: flex-end;
 }
@@ -69,12 +75,14 @@ header {
     .right-nav {
       display: none;
     }
+
     a {
       color: $primaryColor1;
       text-decoration: none;
+      margin: 0 10px;
     }
   }
-  .about {
+  #about {
     background-color: rgba($color: $primaryColor1, $alpha: 0.6);
     padding: $paddingMobile;
     h3 {
@@ -86,13 +94,29 @@ header {
   }
 }
 
-.farm {
-  @extend %mobile-photos-display;
+#farm {
+  h3 {
+    margin: $marginMobile;
+    text-align: center;
+    position: relative;
+  }
+
+  h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
   .farm-photos {
     @extend %mobile-photos-display;
     .barn {
       @include mobile-photos-unit-display(
-        url(../images/farm/StockSnap_49FA273DDD.jpg)
+        url(../images/farm/StockSnap_49FA273DDD.jpg),
+        100%,
+        50vh
       );
       .barn-description {
         p {
@@ -102,7 +126,9 @@ header {
     }
     .mule {
       @include mobile-photos-unit-display(
-        url(../images/farm/StockSnap_BWRCGCOECB.jpg)
+        url(../images/farm/StockSnap_BWRCGCOECB.jpg),
+        100%,
+        50vh
       );
       .mule-description {
         p {
@@ -110,34 +136,50 @@ header {
         }
       }
     }
-  }
-  .cow {
-    @include mobile-photos-unit-display(
-      url(../images/farm/StockSnap_QZZC02VYSS.jpg)
-    );
-    .cow-description {
-      p {
-        @extend %mobile-photos-unit-description;
+    .cow {
+      @include mobile-photos-unit-display(
+        url(../images/farm/StockSnap_QZZC02VYSS.jpg),
+        100%,
+        50vh
+      );
+      .cow-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
       }
     }
-  }
-  .rooster {
-    @include mobile-photos-unit-display(
-      url(../images/farm/StockSnap_V9YD0J883E.jpg)
-    );
-    .rooster-description {
-      p {
-        @extend %mobile-photos-unit-description;
+    .rooster {
+      @include mobile-photos-unit-display(
+        url(../images/farm/StockSnap_V9YD0J883E.jpg),
+        100%,
+        50vh
+      );
+      .rooster-description {
+        p {
+          @extend %mobile-photos-unit-description;
+        }
       }
     }
   }
 }
 
-.alpacas {
+#alpacas {
   margin: $marginMobile;
-  display: flex;
-  flex-direction: column;
-  gap: $gapMobile;
+  h3 {
+    margin: $marginMobile 0;
+    text-align: center;
+    position: relative;
+  }
+  h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+
   .alpaca-photos {
     display: flex;
     flex-direction: row;
@@ -153,35 +195,121 @@ header {
   }
 }
 
-.tours {
+#tours {
   margin: $marginMobile;
-  display: flex;
-  flex-direction: column;
-  gap: $gapMobile;
-  div {
-    border: 0.5px solid black;
-    padding: $paddingMobile;
-    ul {
-      li {
-        list-style-type: none;
-        margin: $paddingMobile 0px;
-        font-style: italic;
+  h3 {
+    margin: $marginMobile 0;
+    text-align: center;
+    position: relative;
+  }
+  h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .tours-descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: $gapMobile;
+
+    div {
+      padding: $paddingMobile;
+      background-color: $greyColor1;
+      box-shadow: 0 0 5px;
+      border-radius: $borderRadiusMin;
+      h4 {
+        font-size: 5vw;
+        text-align: end;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      h4:before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 0.5px;
+        background-color: black;
+      }
+      p {
+        font-size: 2vw;
+        margin: $marginMobile 0;
+      }
+      ul {
+        li {
+          list-style-type: none;
+          margin: $paddingMobile 0px;
+          font-style: italic;
+          text-align: center;
+          font-size: 2vw;
+        }
+      }
+      h5 {
+        text-align: center;
+        font-size: 5vw;
+        margin: $marginDesktop 0;
       }
     }
   }
 }
 
-.stay {
-  @extend %mobile-photos-display;
-  .book-now-button {
-    width: 50%;
+#stay {
+  h3 {
+    margin: $marginMobile;
+    text-align: center;
+    position: relative;
   }
+
+  // THE LINE
+
+  h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+
   .stay-photos {
     @extend %mobile-photos-display;
     .enjoy-the-nature {
+      .highlighted-text {
+        color: $greyColor9;
+        text-align: end;
+        padding: 20px;
+        position: relative;
+        z-index: 0;
+      }
+      .highlighted-text:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-image: url(../svg/brush_stroke_primaryColor2_1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        opacity: 0.9;
+        z-index: -1;
+      }
       @include mobile-photos-unit-display(
-        url(../images/accommodation/StockSnap_XTRAJDQIPV.jpg)
+        url(../images/accommodation/StockSnap_XTRAJDQIPV.jpg),
+        100%,
+        50vh
       );
+      flex-direction: column;
+      justify-content: space-between;
       .enjoy-the-nature-description {
         p {
           @extend %mobile-photos-unit-description;
@@ -189,9 +317,35 @@ header {
       }
     }
     .relax {
+      .highlighted-text {
+        color: $greyColor1;
+        text-align: end;
+        padding: 20px 40px;
+        position: relative;
+        z-index: 0;
+      }
+      .highlighted-text:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 100%;
+        background-image: url(../svg/brush_stroke_primaryColor2_2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        opacity: 0.7;
+        z-index: -1;
+      }
       @include mobile-photos-unit-display(
-        url(../images/accommodation/StockSnap_BD0AC07780.jpg)
+        url(../images/accommodation/StockSnap_BD0AC07780.jpg),
+        100%,
+        50vh
       );
+      flex-direction: column;
+      justify-content: space-between;
       .relax-description {
         p {
           @extend %mobile-photos-unit-description;
@@ -199,9 +353,35 @@ header {
       }
     }
     .cabine {
+      .highlighted-text {
+        color: $greyColor10;
+        text-align: end;
+        padding: 20px 40px;
+        position: relative;
+        z-index: 0;
+      }
+      .highlighted-text:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 100%;
+        background-image: url(../svg/brush_stroke_primaryColor2_3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        opacity: 0.7;
+        z-index: -1;
+      }
       @include mobile-photos-unit-display(
-        url(../images/accommodation/StockSnap_T0BHAFEFFR.jpg)
+        url(../images/accommodation/StockSnap_T0BHAFEFFR.jpg),
+        100%,
+        50vh
       );
+      flex-direction: column;
+      justify-content: space-between;
       .cabine-description {
         p {
           @extend %mobile-photos-unit-description;
@@ -212,20 +392,36 @@ header {
 }
 
 .book-now {
+  margin: $marginDesktop;
   #book-now-description {
     font-style: italic;
-    font-size: 4vw;
-    margin: $marginMobile;
+    font-size: 2vw;
     text-align: center;
   }
 }
 
-.shop {
+#shop {
+  h3 {
+    margin: $marginMobile;
+    text-align: center;
+    position: relative;
+  }
+  h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
   .shop-food {
     @extend %mobile-photos-display;
     .coffee {
       @include mobile-photos-unit-display(
-        url(../images/farm-shop/StockSnap_THXU08ODDE.jpg)
+        url(../images/farm-shop/StockSnap_THXU08ODDE.jpg),
+        100%,
+        50vh
       );
       .coffee-description {
         p {
@@ -235,7 +431,9 @@ header {
     }
     .bread {
       @include mobile-photos-unit-display(
-        url(../images/farm-shop/StockSnap_NKU48AAAWF.jpg)
+        url(../images/farm-shop/StockSnap_NKU48AAAWF.jpg),
+        100%,
+        50vh
       );
       .bread-description {
         p {
@@ -245,7 +443,9 @@ header {
     }
     .fruits {
       @include mobile-photos-unit-display(
-        url(../images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg)
+        url(../images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg),
+        100%,
+        50vh
       );
       .fruits-description {
         p {
@@ -255,14 +455,22 @@ header {
     }
   }
 }
-.contact {
-  border: 0.5px solid black;
+#contact {
+  box-shadow: 0 0 5px black;
+  border-radius: $borderRadiusMin;
   margin: $marginMobile;
   padding: $paddingMobile;
+  background-color: $greyColor1;
+  h3 {
+    text-align: center;
+    position: relative;
+  }
   form {
     div {
       label {
         display: block;
+        margin-top: $marginMobile;
+        font-size: smaller;
       }
       input,
       textarea {
@@ -275,28 +483,299 @@ header {
 button {
   display: block;
   padding: 10px 30px;
-  margin: 0 auto;
+  margin: $marginDesktop auto;
+  border: none;
+  box-shadow: 0 0 3px black;
+  border-radius: $borderRadiusMin;
+  background-color: $greyColor8;
+  color: $greyColor1;
 }
 
 footer {
   height: 5vh;
-  background-color: red;
+  background-color: purple;
   color: $primaryColor1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-// @media (min-width: 768px) {
-//   header {
-//     background-image: url(../images/myImg/alpaca-7169203_1920.jpg);
-//     nav {
-//       .right-nav-logo {
-//         display: none;
-//       }
-//       .right-nav {
-//         display: inline-block;
-//       }
-//     }
-//   }
-// }
+// START OF 768px SCREENS
+
+@media (min-width: 768px) {
+  header {
+    background-image: url(../images/myImg/alpaca-7169203_1920.jpg);
+    nav {
+      .right-nav-logo {
+        display: none;
+      }
+      .right-nav {
+        display: inline-block;
+      }
+    }
+    #about {
+      background-color: rgba($color: $primaryColor1, $alpha: 0.6);
+      padding: $paddingMobile;
+      h3 {
+        font-size: medium;
+      }
+      p {
+        font-size: medium;
+      }
+    }
+  }
+
+  #farm {
+    h3 {
+      margin: $marginDesktop 0;
+    }
+    h3:before {
+      content: "";
+      position: absolute;
+      bottom: -(calc($marginDesktop/4));
+      height: 1px;
+    }
+    margin: $marginDesktop;
+    .farm-photos {
+      gap: $gapDesktop;
+      .barn {
+        @include mobile-photos-unit-display(
+          url(../images/farm/StockSnap_49FA273DDD.jpg),
+          calc(50% - $gapDesktop/2),
+          50vh
+        );
+        .barn-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+      .mule {
+        @include mobile-photos-unit-display(
+          url(../images/farm/StockSnap_BWRCGCOECB.jpg),
+          calc(50% - $gapDesktop/2),
+          50vh
+        );
+        .mule-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+      .cow {
+        @include mobile-photos-unit-display(
+          url(../images/farm/StockSnap_QZZC02VYSS.jpg),
+          calc(50% - $gapDesktop/2),
+          50vh
+        );
+        .cow-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+      .rooster {
+        @include mobile-photos-unit-display(
+          url(../images/farm/StockSnap_V9YD0J883E.jpg),
+          calc(50% - $gapDesktop/2),
+          50vh
+        );
+        .rooster-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+
+  #alpacas {
+    margin: $marginDesktop;
+    h3 {
+      margin: $marginDesktop 0;
+    }
+    h3:before {
+      content: "";
+      position: absolute;
+      bottom: -(calc($marginDesktop/4));
+      height: 1px;
+    }
+    .alpaca-photos {
+      gap: $gapDesktop;
+      img {
+        width: calc((100% / 6) - ((5 * $gapDesktop) / 6));
+      }
+    }
+  }
+  #tours {
+    margin: $marginDesktop;
+    h3 {
+      margin: $marginDesktop 0;
+    }
+    h3:before {
+      content: "";
+      position: absolute;
+      bottom: -(calc($marginDesktop/4));
+      height: 1px;
+    }
+    .tours-descriptions {
+      flex-direction: row;
+      gap: $gapDesktop;
+      div {
+        padding: $paddingDesktop;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        h4 {
+          font-size: medium;
+        }
+        p {
+          font-size: small;
+          margin: $marginMobile 0;
+        }
+        ul {
+          li {
+            font-size: small;
+          }
+        }
+        h5 {
+          font-size: medium;
+          margin: $marginMobile 0;
+        }
+      }
+    }
+  }
+
+  #stay {
+    margin: $marginDesktop;
+    h3 {
+      margin: $marginDesktop 0;
+    }
+    h3:before {
+      content: "";
+      position: absolute;
+      bottom: -(calc($marginDesktop/4));
+      height: 1px;
+    }
+    .stay-photos {
+      gap: $gapDesktop;
+      .enjoy-the-nature {
+        @include mobile-photos-unit-display(
+          url(../images/accommodation/StockSnap_XTRAJDQIPV.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .enjoy-the-nature-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+      .relax {
+        @include mobile-photos-unit-display(
+          url(../images/accommodation/StockSnap_BD0AC07780.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .relax-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+      .cabine {
+        @include mobile-photos-unit-display(
+          url(../images/accommodation/StockSnap_T0BHAFEFFR.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .cabine-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+
+  .book-now {
+    margin: $marginDesktop;
+    #book-now-description {
+      font-size: small;
+    }
+  }
+
+  #shop {
+    margin: $marginDesktop;
+    h3 {
+      margin: $marginDesktop 0;
+    }
+    h3:before {
+      content: "";
+      position: absolute;
+      bottom: -(calc($marginDesktop/4));
+      height: 1px;
+    }
+    .shop-food {
+      gap: $gapDesktop;
+      .coffee {
+        @include mobile-photos-unit-display(
+          url(../images/farm-shop/StockSnap_THXU08ODDE.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .coffee-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+
+      .bread {
+        @include mobile-photos-unit-display(
+          url(../images/farm-shop/StockSnap_NKU48AAAWF.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .bread-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+
+      .fruits {
+        @include mobile-photos-unit-display(
+          url(../images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg),
+          calc(100% / 3 - $gapDesktop * 2 / 3),
+          50vh
+        );
+        .fruits-description {
+          p {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    max-width: 50%;
+    margin: $marginDesktop auto;
+    padding: $paddingDesktop;
+    h3 {
+      text-align: center;
+      position: relative;
+    }
+    form {
+      div {
+        label {
+          display: block;
+          margin-top: $marginDesktop;
+          font-size: smaller;
+        }
+      }
+    }
+  }
+}
