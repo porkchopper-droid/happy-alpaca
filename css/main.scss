@@ -32,7 +32,7 @@
 }
 
 %mobile-photos-unit-description {
-  font-size: 2vw;
+  font-size: 16px;
   background-color: rgba($color: $primaryColor1, $alpha: 0.8);
   padding: $paddingMobile;
 }
@@ -105,7 +105,7 @@ header {
     // background-color: rgba($color: $primaryColor1, $alpha: 0.6);
     padding: $paddingMobile;
     h3 {
-      font-size: 2vw;
+      // font-size: 2vw;
       z-index: 2;
       position: relative;
       text-align: center;
@@ -114,7 +114,7 @@ header {
     p {
       z-index: 2;
       position: relative;
-      font-size: 2vw;
+      // font-size: 2vw;
       text-align: center;
     }
   }
@@ -248,7 +248,7 @@ header {
       box-shadow: 0 0 5px;
       border-radius: $borderRadiusMin;
       h4 {
-        font-size: 5vw;
+        // font-size: 5vw;
         text-align: end;
         position: relative;
         margin-bottom: 10px;
@@ -264,7 +264,7 @@ header {
         background-color: black;
       }
       p {
-        font-size: 2vw;
+        // font-size: 2vw;
         margin: $marginMobile 0;
       }
       ul {
@@ -273,12 +273,12 @@ header {
           margin: $paddingMobile 0px;
           font-style: italic;
           text-align: center;
-          font-size: 2vw;
+          // font-size: 2vw;
         }
       }
       h5 {
         text-align: center;
-        font-size: 5vw;
+        // font-size: 5vw;
         margin: $marginDesktop 0;
       }
     }
@@ -421,7 +421,7 @@ header {
   margin: $marginDesktop;
   #book-now-description {
     font-style: italic;
-    font-size: 2vw;
+    // font-size: 2vw;
     text-align: center;
   }
 }
@@ -795,7 +795,6 @@ footer {
     padding: $paddingDesktop;
     h3 {
       text-align: center;
-      position: relative;
     }
     form {
       div {

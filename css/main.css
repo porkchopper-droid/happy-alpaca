@@ -11,7 +11,7 @@
 }
 
 #shop .shop-food .fruits .fruits-description p, #shop .shop-food .bread .bread-description p, #shop .shop-food .coffee .coffee-description p, #stay .stay-photos .cabine .cabine-description p, #stay .stay-photos .relax .relax-description p, #stay .stay-photos .enjoy-the-nature .enjoy-the-nature-description p, #farm .farm-photos .rooster .rooster-description p, #farm .farm-photos .cow .cow-description p, #farm .farm-photos .mule .mule-description p, #farm .farm-photos .barn .barn-description p {
-  font-size: 2vw;
+  font-size: 16px;
   background-color: rgba(253, 249, 246, 0.8);
   padding: 10px;
 }
@@ -79,7 +79,6 @@ header #about:before {
   z-index: 0;
 }
 header #about h3 {
-  font-size: 2vw;
   z-index: 2;
   position: relative;
   text-align: center;
@@ -87,7 +86,6 @@ header #about h3 {
 header #about p {
   z-index: 2;
   position: relative;
-  font-size: 2vw;
   text-align: center;
 }
 
@@ -202,7 +200,6 @@ header #about p {
   border-radius: 5px;
 }
 #tours .tours-descriptions div h4 {
-  font-size: 5vw;
   text-align: end;
   position: relative;
   margin-bottom: 10px;
@@ -217,7 +214,6 @@ header #about p {
   background-color: black;
 }
 #tours .tours-descriptions div p {
-  font-size: 2vw;
   margin: 10px 0;
 }
 #tours .tours-descriptions div ul li {
@@ -225,11 +221,9 @@ header #about p {
   margin: 10px 0px;
   font-style: italic;
   text-align: center;
-  font-size: 2vw;
 }
 #tours .tours-descriptions div h5 {
   text-align: center;
-  font-size: 5vw;
   margin: 20px 0;
 }
 
@@ -351,7 +345,6 @@ header #about p {
 }
 .book-now #book-now-description {
   font-style: italic;
-  font-size: 2vw;
   text-align: center;
 }
 
@@ -693,7 +686,6 @@ footer {
   }
   #contact h3 {
     text-align: center;
-    position: relative;
   }
   #contact form div label {
     display: block;
