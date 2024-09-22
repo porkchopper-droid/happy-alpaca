@@ -222,7 +222,7 @@ header #about p {
   font-style: italic;
   text-align: center;
 }
-#tours .tours-descriptions div h5 {
+#tours .tours-descriptions div .prices-starting {
   text-align: center;
   margin: 20px 0;
 }
