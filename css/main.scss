@@ -83,13 +83,38 @@ header {
     }
   }
   #about {
-    background-color: rgba($color: $primaryColor1, $alpha: 0.6);
+    position: relative;
+    z-index: 10;
+    padding: $paddingMobile;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120%;
+      height: 150%;
+      background-image: url(../wireframe/Drawing\ 2\.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.7;
+      z-index: 0;
+    }
+    // background-color: rgba($color: $primaryColor1, $alpha: 0.6);
     padding: $paddingMobile;
     h3 {
       font-size: 2vw;
+      z-index: 2;
+      position: relative;
+      text-align: center;
     }
+
     p {
+      z-index: 2;
+      position: relative;
       font-size: 2vw;
+      text-align: center;
     }
   }
 }
@@ -487,7 +512,7 @@ button {
   border: none;
   box-shadow: 0 0 3px black;
   border-radius: $borderRadiusMin;
-  background-color: $greyColor8;
+  background-color: $accentColor5;
   color: $greyColor1;
 }
 
@@ -516,6 +541,9 @@ footer {
     #about {
       background-color: rgba($color: $primaryColor1, $alpha: 0.6);
       padding: $paddingMobile;
+      &:before {
+        display: none;
+      }
       h3 {
         font-size: medium;
       }
