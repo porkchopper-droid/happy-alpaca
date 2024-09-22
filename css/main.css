@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #shop .shop-food, #stay .stay-photos, #farm .farm-photos {
   display: flex;
   flex-wrap: wrap;
@@ -199,12 +203,12 @@ header #about p {
   box-shadow: 0 0 5px;
   border-radius: 5px;
 }
-#tours .tours-descriptions div h4 {
+#tours .tours-descriptions div .day-tour {
   text-align: end;
   position: relative;
   margin-bottom: 10px;
 }
-#tours .tours-descriptions div h4:before {
+#tours .tours-descriptions div .day-tour:before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -408,6 +412,7 @@ header #about p {
 #contact form div input,
 #contact form div textarea {
   width: 100%;
+  resize: vertical;
 }
 
 button {
@@ -623,7 +628,7 @@ footer {
     font-size: medium;
   }
   .book-now {
-    margin: 20px;
+    margin: 40px;
   }
   .book-now #book-now-description {
     font-size: small;

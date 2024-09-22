@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 %mobile-photos-display {
   display: flex;
   flex-wrap: wrap;
@@ -247,14 +251,14 @@ header {
       background-color: $greyColor1;
       box-shadow: 0 0 5px;
       border-radius: $borderRadiusMin;
-      h4 {
+      .day-tour {
         // font-size: 5vw;
         text-align: end;
         position: relative;
         margin-bottom: 10px;
       }
 
-      h4:before {
+      .day-tour:before {
         content: "";
         position: absolute;
         bottom: -5px;
@@ -501,6 +505,7 @@ header {
       input,
       textarea {
         width: 100%;
+        resize: vertical;
       }
     }
   }
@@ -729,7 +734,7 @@ footer {
   }
 
   .book-now {
-    margin: $marginDesktop;
+    margin: calc(2*$marginDesktop);
     #book-now-description {
       font-size: small;
     }
