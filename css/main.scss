@@ -422,7 +422,7 @@ header {
 }
 
 .book-now {
-  margin: $marginDesktop;
+  margin: calc(2*$marginDesktop);
   #book-now-description {
     font-style: italic;
     // font-size: 2vw;
@@ -734,7 +734,6 @@ footer {
   }
 
   .book-now {
-    margin: calc(2*$marginDesktop);
     #book-now-description {
       font-size: small;
     }

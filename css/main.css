@@ -345,7 +345,7 @@ header #about p {
   z-index: -1;
 }
 .book-now {
-  margin: 20px;
+  margin: 40px;
 }
 .book-now #book-now-description {
   font-style: italic;
@@ -626,9 +626,6 @@ footer {
   }
   #stay .stay-photos .cabine .cabine-description p {
     font-size: medium;
-  }
-  .book-now {
-    margin: 40px;
   }
   .book-now #book-now-description {
     font-size: small;
