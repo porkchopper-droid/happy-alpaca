@@ -173,6 +173,10 @@ header #about p {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  transition: 0.15s;
+}
+#alpacas .alpaca-photos img:hover {
+  transform: scale(1.1);
 }
 
 #tours {
@@ -302,7 +306,7 @@ header #about p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
+  width: 100%;
   height: 100%;
   background-image: url(../svg/brush_stroke_primaryColor2_2.png);
   background-position: center;
@@ -335,7 +339,7 @@ header #about p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
+  width: 100%;
   height: 100%;
   background-image: url(../svg/brush_stroke_primaryColor2_3.png);
   background-position: center;
@@ -350,6 +354,38 @@ header #about p {
 .book-now #book-now-description {
   font-style: italic;
   text-align: center;
+}
+
+.button-regular {
+  display: block;
+  padding: 10px 30px;
+  margin: 20px auto;
+  border: none;
+  box-shadow: 0 0 3px black;
+  border-radius: 5px;
+  background-color: #97cbef;
+  color: #f9f9fa;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.button-regular:hover {
+  transform: scale(1.1);
+}
+
+.button-fancy {
+  background-image: url(../wireframe/Drawing\ 3.png);
+  background-size: 100% 100%;
+  background-color: #fdf9f6;
+  width: 180px;
+  aspect-ratio: 2/1;
+  border: none;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.button-fancy:hover {
+  transform: scale(1.2);
 }
 
 #shop h3 {
@@ -413,17 +449,6 @@ header #about p {
 #contact form div textarea {
   width: 100%;
   resize: vertical;
-}
-
-button {
-  display: block;
-  padding: 10px 30px;
-  margin: 20px auto;
-  border: none;
-  box-shadow: 0 0 3px black;
-  border-radius: 5px;
-  background-color: #97cbef;
-  color: #f9f9fa;
 }
 
 footer {
