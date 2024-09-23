@@ -61,6 +61,9 @@ header nav a {
   text-decoration: none;
   margin: 0 10px;
 }
+header nav a:hover {
+  text-decoration: underline;
+}
 header #about {
   position: relative;
   z-index: 10;
@@ -382,10 +385,27 @@ header #about p {
   display: block;
   margin: 20px auto;
   cursor: pointer;
-  transition: 0.15s ease;
 }
 .button-fancy:hover {
-  transform: scale(1.2);
+  animation: ringing-bells 1s infinite ease forwards;
+  position: relative;
+}
+@keyframes ringing-bells {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
 }
 
 #shop h3 {
