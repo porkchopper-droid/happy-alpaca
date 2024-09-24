@@ -502,9 +502,7 @@ header {
   display: block;
   margin: $marginDesktop auto;
   cursor: pointer;
-  // transition: 0.15s ease;
   &:hover {
-    // transform: scale(1.2);
     animation: ringing-bells 1s infinite ease forwards;
     position: relative;
   }
