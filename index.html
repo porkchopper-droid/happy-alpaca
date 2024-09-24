@@ -37,10 +37,23 @@
         <div class="left-nav">
           <a href="#"><span>The</span><span>Happy</span><span>Alpaca</span></a>
         </div>
-
-        <div class="right-nav-logo">
-          <img src="./images/logo/alpaca.svg" />
+        <!-- DROPDOWN MENU -->
+        <div class="dropdown">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle">
+            <div class="right-nav-logo">
+              <img src="./images/logo/alpaca.svg" />
+            </div>
+          </label>
+          <ul>
+            <li><a href="#farm">FARM</a></li>
+            <li><a href="#alpacas">ALPACAS</a></li>
+            <li><a href="#tours">TOURS</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
         </div>
+
         <div class="right-nav">
           <a href="#about">ABOUT</a>
           <a href="#farm">FARM</a>
@@ -73,8 +86,6 @@
                 beautiful, eco-friendly products. Come say hello!
               </p>
             </div>
-
-            <!-- <img src="./images/farm/StockSnap_49FA273DDD.jpg" alt="barn" /> -->
           </div>
           <div class="mule">
             <div class="mule-description">
@@ -85,7 +96,6 @@
               </p>
             </div>
           </div>
-          <!-- <img src="./images/farm/StockSnap_BWRCGCOECB.jpg" alt="" /> -->
           <div class="cow">
             <div class="cow-description">
               <p>
@@ -95,7 +105,6 @@
               </p>
             </div>
           </div>
-          <!-- <img src="./images/farm/StockSnap_QZZC02VYSS.jpg" alt="" /> -->
           <div class="rooster">
             <div class="rooster-description">
               <p>
@@ -105,76 +114,11 @@
               </p>
             </div>
           </div>
-          <!-- <img src="./images/farm/StockSnap_V9YD0J883E.jpg" alt="" /> -->
         </div>
       </section>
       <section id="alpacas">
         <h3>OUR ALPACAS</h3>
         <div class="alpaca-photos">
-          <!-- TEST WITH ARC-TEXT 
-          <div class="balou-photo">
-            <img src="./images/alpacas/balou.jpg" alt="balou" />
-            <div class="balou-name">
-              <span class="text-arc">B</span>
-              <span class="text-arc">A</span>
-              <span class="text-arc">L</span>
-              <span class="text-arc">O</span>
-              <span class="text-arc">U</span>
-            </div>
-          </div>
-          <div class="gismo-photo">
-            <img src="./images/alpacas/gismo.jpg" alt="gismo" />
-            <div class="gismo-name">
-              <span class="text-arc">G</span>
-              <span class="text-arc">I</span>
-              <span class="text-arc">S</span>
-              <span class="text-arc">M</span>
-              <span class="text-arc">O</span>
-            </div>
-          </div>
-
-          <div class="hardi-photo">
-            <img src="./images/alpacas/hardi.jpg" alt="hardi" />
-            <div class="hardi-name">
-              <span class="text-arc">H</span>
-              <span class="text-arc">A</span>
-              <span class="text-arc">R</span>
-              <span class="text-arc">D</span>
-              <span class="text-arc">I</span>
-            </div>
-          </div>
-
-          <div class="kalle-photo">
-            <img src="./images/alpacas/kalle.jpg" alt="kalle" />
-            <div class="kalle-name">
-              <span class="text-arc">K</span>
-              <span class="text-arc">A</span>
-              <span class="text-arc">L</span>
-              <span class="text-arc">L</span>
-              <span class="text-arc">E</span>
-            </div>
-          </div>
-          <div class="king-photo">
-            <img src="./images/alpacas/king.jpg" alt="king" />
-            <div class="king-name">
-              <span class="text-arc">K</span>
-              <span class="text-arc">I</span>
-              <span class="text-arc">N</span>
-              <span class="text-arc">G</span>
-            </div>
-          </div>
-          <div class="scotty-photo">
-            <img src="./images/alpacas/scotty.jpg" alt="scotty" />
-            <div class="scotty-name">
-              <span class="text-arc">S</span>
-              <span class="text-arc">C</span>
-              <span class="text-arc">O</span>
-              <span class="text-arc">T</span>
-              <span class="text-arc">T</span>
-              <span class="text-arc">Y</span>
-            </div>
-          </div>-->
-
           <img src="./images/alpacas/balou.jpg" alt="balou" />
           <img src="./images/alpacas/gismo.jpg" alt="gismo" />
           <img src="./images/alpacas/hardi.jpg" alt="hardi" />
@@ -249,10 +193,7 @@
         <div class="stay-photos">
           <div class="enjoy-the-nature">
             <h4 class="highlighted-text">Enjoy the nature</h4>
-            <!-- <img
-              src="./images/accommodation/StockSnap_XTRAJDQIPV.jpg"
-              alt="nature"
-            /> -->
+
             <div class="enjoy-the-nature-description">
               <p>
                 Wonderful forests and fields surround our farm. There is so much
@@ -263,10 +204,7 @@
 
           <div class="relax">
             <h4 class="highlighted-text">Relax</h4>
-            <!-- <img
-              src="./images/accommodation/StockSnap_BD0AC07780.jpg"
-              alt="relaxing"
-            /> -->
+
             <div class="relax-description">
               <p>
                 There is nothing more relaxing than exploring the surroundings
@@ -279,10 +217,6 @@
           <div class="cabine">
             <h4 class="highlighted-text">The cabine</h4>
             <div class="cabine-description">
-              <!-- <img
-              src="./images/accommodation/StockSnap_T0BHAFEFFR.jpg"
-              alt="cabine"
-            /> -->
               <p>
                 Spend your night in our stunning lakeside cabin. Light fire in
                 the fireplace, enjoy a good book and a glass of wine from our
@@ -291,15 +225,15 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="book-now">
-        <p id="book-now-description">
-          Could we convice you of our wide rage of products? Then, what are you
-          waiting for? Contact us via the contact form and ask for your
-          individual offer. We will get back to you as soon as possible to make
-          your stay unforgettable!
-        </p>
-        <button class="button-fancy"></button>
+        <section class="book-now">
+          <p id="book-now-description">
+            Could we convice you of our wide rage of products? Then, what are
+            you waiting for? Contact us via the contact form and ask for your
+            individual offer. We will get back to you as soon as possible to
+            make your stay unforgettable!
+          </p>
+          <button class="button-fancy"></button>
+        </section>
       </section>
 
       <section id="shop">
@@ -313,16 +247,8 @@
                 baristas with love.
               </p>
             </div>
-            <!-- <img
-              src="./images/farm-shop/StockSnap_THXU08ODDE.jpg"
-              alt="cofeeshop"
-            /> -->
           </div>
           <div class="bread">
-            <!-- <img
-              src="./images/farm-shop/StockSnap_NKU48AAAWF.jpg"
-              alt="bread"
-            /> -->
             <div class="bread-description">
               <p>
                 Our country bakery bakes daily fresh and handmade baked goods
@@ -332,10 +258,6 @@
             </div>
           </div>
           <div class="fruits">
-            <!-- <img
-              src="./images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg"
-              alt="fruits"
-            /> -->
             <div class="fruits-description">
               <p>
                 Fresh seasonal fruit from our orchards and surrounding farm. We

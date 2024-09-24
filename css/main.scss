@@ -65,6 +65,46 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: $paddingMobile;
+
+    // TRYING MENU DROPDOWN
+    .dropdown {
+      position: relative;
+      input[type="checkbox"] {
+        display: none;
+        &:checked ~ ul {
+          display: block;
+        }
+      }
+      ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 120px;
+        background-color: rgba($color: $blackColor, $alpha: 0.6);
+
+        li {
+          list-style-type: none;
+          margin: 10px 0;
+
+          a {
+            text-decoration: none;
+            // padding: 10px;
+            display: block;
+          }
+        }
+      }
+      label {
+        .right-nav-logo {
+          cursor: pointer;
+          img {
+            height: 10vh;
+            // width: auto;
+          }
+        }
+      }
+    }
+    // END OF DROPDOWN MENU
     .left-nav {
       a {
         span {
@@ -72,11 +112,11 @@ header {
         }
       }
     }
-    .right-nav-logo {
-      img {
-        height: 25px;
-      }
-    }
+    // .right-nav-logo {
+    //   img {
+    //     height: 25px;
+    //   }
+    // }
     .right-nav {
       display: none;
     }
@@ -645,6 +685,8 @@ footer {
   }
 
   #farm {
+    scroll-snap-align: start;
+    // height: 100vh;
     h3 {
       margin: $marginDesktop 0;
     }
@@ -661,7 +703,7 @@ footer {
         @include mobile-photos-unit-display(
           url(../images/farm/StockSnap_49FA273DDD.jpg),
           calc(50% - $gapDesktop/2),
-          50vh
+          50vh // calc((100vh - 65.625px) / 2 - $gapDesktop/2)
         );
         .barn-description {
           p {
@@ -673,7 +715,7 @@ footer {
         @include mobile-photos-unit-display(
           url(../images/farm/StockSnap_BWRCGCOECB.jpg),
           calc(50% - $gapDesktop/2),
-          50vh
+          50vh // calc((100vh - 65.625px) / 2 - $gapDesktop/2)
         );
         .mule-description {
           p {
@@ -685,7 +727,7 @@ footer {
         @include mobile-photos-unit-display(
           url(../images/farm/StockSnap_QZZC02VYSS.jpg),
           calc(50% - $gapDesktop/2),
-          50vh
+          50vh // calc((100vh - 65.625px) / 2 - $gapDesktop/2)
         );
         .cow-description {
           p {
@@ -697,7 +739,7 @@ footer {
         @include mobile-photos-unit-display(
           url(../images/farm/StockSnap_V9YD0J883E.jpg),
           calc(50% - $gapDesktop/2),
-          50vh
+          50vh // calc((100vh - 65.625px) / 2 - $gapDesktop/2)
         );
         .rooster-description {
           p {
@@ -709,6 +751,7 @@ footer {
   }
 
   #alpacas {
+    scroll-snap-align: start;
     margin: $marginDesktop;
     h3 {
       margin: $marginDesktop 0;
@@ -727,6 +770,7 @@ footer {
     }
   }
   #tours {
+    scroll-snap-align: start;
     margin: $marginDesktop;
     h3 {
       margin: $marginDesktop 0;
@@ -767,7 +811,11 @@ footer {
   }
 
   #stay {
+    height: 100vh;
     margin: $marginDesktop;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     h3 {
       margin: $marginDesktop 0;
     }
@@ -816,11 +864,11 @@ footer {
         }
       }
     }
-  }
-
-  .book-now {
-    #book-now-description {
-      font-size: small;
+    .book-now {
+      margin: 0 calc($marginDesktop * 2);
+      #book-now-description {
+        font-size: small;
+      }
     }
   }
 
@@ -880,7 +928,7 @@ footer {
 
   #contact {
     max-width: 50%;
-    margin: $marginDesktop auto;
+    margin: calc($marginDesktop * 2) auto;
     padding: $paddingDesktop;
     h3 {
       text-align: center;
