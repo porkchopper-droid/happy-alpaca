@@ -139,6 +139,7 @@ header #about p {
   background-color: black;
 }
 #farm .farm-photos .barn {
+  opacity: 0;
   background-image: url(../images/farm/StockSnap_49FA273DDD.jpg);
   background-size: cover;
   background-position: center;
@@ -146,8 +147,18 @@ header #about p {
   height: 50vh;
   display: flex;
   align-items: flex-end;
+  animation: barn-fade-in 0.8s ease forwards;
+}
+@keyframes barn-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #farm .farm-photos .mule {
+  opacity: 0;
   background-image: url(../images/farm/StockSnap_BWRCGCOECB.jpg);
   background-size: cover;
   background-position: center;
@@ -155,8 +166,18 @@ header #about p {
   height: 50vh;
   display: flex;
   align-items: flex-end;
+  animation: mule-fade-in 0.8s 0.4s ease forwards;
+}
+@keyframes mule-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #farm .farm-photos .cow {
+  opacity: 0;
   background-image: url(../images/farm/StockSnap_QZZC02VYSS.jpg);
   background-size: cover;
   background-position: center;
@@ -164,8 +185,18 @@ header #about p {
   height: 50vh;
   display: flex;
   align-items: flex-end;
+  animation: cow-fade-in 0.8s ease 0.8s forwards;
+}
+@keyframes cow-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #farm .farm-photos .rooster {
+  opacity: 0;
   background-image: url(../images/farm/StockSnap_V9YD0J883E.jpg);
   background-size: cover;
   background-position: center;
@@ -173,7 +204,17 @@ header #about p {
   height: 50vh;
   display: flex;
   align-items: flex-end;
+  animation: rooster-fade-in 0.8s ease 1.2s forwards;
 }
+@keyframes rooster-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #alpacas {
   margin: 10px;
 }

@@ -49,6 +49,7 @@ body {
 }
 
 header {
+  // opacity: 0;
   overflow: hidden;
   background-image: url(../images/myImg/322932448_603553828241847_6233234788884693655_n.jpg);
   background-size: cover;
@@ -57,6 +58,15 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  // animation: header-fade-in 0.8s ease forwards;
+  // @keyframes header-fade-in {
+  //   from {
+  //     opacity: 0;
+  //   }
+  //   to {
+  //     opacity: 1;
+  //   }
+  // }
   nav {
     background-color: rgba($color: $blackColor, $alpha: 0.6);
     height: 15%;
@@ -185,52 +195,94 @@ header {
   }
   .farm-photos {
     @extend %mobile-photos-display;
+
     .barn {
+      opacity: 0;
       @include mobile-photos-unit-display(
         url(../images/farm/StockSnap_49FA273DDD.jpg),
         100%,
         50vh
       );
+      animation: barn-fade-in 0.8s ease forwards;
+
       .barn-description {
         p {
           @extend %mobile-photos-unit-description;
         }
       }
     }
+    @keyframes barn-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     .mule {
+      opacity: 0;
       @include mobile-photos-unit-display(
         url(../images/farm/StockSnap_BWRCGCOECB.jpg),
         100%,
         50vh
       );
+      animation: mule-fade-in 0.8s 0.4s ease forwards;
       .mule-description {
         p {
           @extend %mobile-photos-unit-description;
         }
       }
     }
+    @keyframes mule-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     .cow {
+      opacity: 0;
       @include mobile-photos-unit-display(
         url(../images/farm/StockSnap_QZZC02VYSS.jpg),
         100%,
         50vh
       );
+      animation: cow-fade-in 0.8s ease 0.8s forwards;
       .cow-description {
         p {
           @extend %mobile-photos-unit-description;
         }
       }
     }
+    @keyframes cow-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     .rooster {
+      opacity: 0;
       @include mobile-photos-unit-display(
         url(../images/farm/StockSnap_V9YD0J883E.jpg),
         100%,
         50vh
       );
+      animation: rooster-fade-in 0.8s ease 1.2s forwards;
       .rooster-description {
         p {
           @extend %mobile-photos-unit-description;
         }
+      }
+    }
+    @keyframes rooster-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
       }
     }
   }
